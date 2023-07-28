@@ -1,0 +1,908 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+:root{
+    --main-color:#20c997;
+    --second-color:#6c757d;
+
+}
+section{
+    padding: 3rem 0;
+}
+a{
+    text-decoration: none;
+}
+ul{
+    list-style: none;
+}
+
+*::selection{
+    background-color: var(--main-color);
+    color:white;
+}
+body{
+    font-family: 'Poppins', sans-serif;
+}
+
+.container{
+    width: 85%;
+    margin: auto;
+}
+
+section{
+    padding: 2rem 0;
+    margin: 2rem 0;
+}
+
+
+.row{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* ------------------------------------------------------ */
+
+
+.tittle{
+    font-size: 2.5rem;
+    text-align: center;
+    position: relative;
+    color: #333;
+    margin: 3rem 0;
+}
+
+.tittle::after{
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    font-size: 6rem;
+    opacity: .1;
+    text-transform: uppercase;
+}
+
+.tittle::before{
+    content: "";
+    position: absolute;
+    top: 110%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 5rem;
+    height: 3px;
+    background-color: var(--main-color);
+
+}
+
+
+
+/* .....header............................. */
+header{
+    height: 110vh;
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0.6),rgba(0, 0, 0, 0.9)),url(../images/intro-bg.jpg);
+    background-position: calc();
+    background-size: cover;
+}
+
+nav{
+    position: fixed;
+    width: 100%;
+    z-index: 9999999;
+    padding: .8rem 0;
+    transition: all .5s ;
+}
+
+
+
+.links{
+    
+    margin-right:2rem ;
+}
+
+.links a{
+    font-size: 1rem;
+    text-transform: capitalize;
+    color: white;  
+    margin-left: 1rem;
+    transition: all .5s;
+}
+
+.links a.active , .links a:hover , #navToggle:hover{
+    color: var(--main-color);
+}
+
+#navToggle{
+    font-size: 1.5rem;
+    color: white;
+    display: none;
+    transition: all .5s;
+    cursor: pointer;
+}
+
+
+
+
+
+
+/* home...................... */
+
+#home{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    color: white;
+    margin-top: 0;
+}
+
+#home h4{
+    font-size: 1.75rem;
+    margin: 1.5rem 0;
+   
+
+}
+#home h1{
+    font-size: 3rem;
+    margin: 1.5rem 0;
+   
+}
+
+#home h1 .curser{
+    animation: blink .5s infinite ;
+    opacity: 0;
+}
+@keyframes blink {
+    0%{
+        opacity: 0;
+    }
+    50%{
+        opacity: 1;
+    }
+    
+}
+
+#home p{
+    color: #dee3e4;
+    font-size: 1.3rem;
+    margin: 1.5rem 0;
+   
+}
+
+#home .btn{
+    padding: 0.8rem 2.2rem;
+    border: 2px solid var(--main-color);
+    color: var(--main-color);
+    font-size: 1.2rem;
+    border-radius: 25px;
+    margin: 1.5rem 0 3rem;
+    transition: all .5S;
+}
+#home .btn:hover{
+    background-color: var(--main-color);
+    color: white;
+}
+
+#home .down{
+    font-size: 1.5rem;
+    color: white;
+}
+
+
+/* ..................about.............................................. */
+
+
+#about .tittle::after{
+    content: "aboutme";
+}
+
+#about .row{
+    margin:2rem 0 ;
+}
+
+#about .left{
+    width: 75%;
+    padding: 1rem;
+}
+
+
+
+#about .right{
+    width: 25%;
+    padding: 1.5rem;
+    
+}
+
+#about .left h3{
+    color: #555;
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+#about .left h3 span{
+    color: var(--main-color);
+}
+
+#about .left p{
+    line-height: 2.5rem;
+    color: #555;
+    font-size: 1.1rem;
+    
+}
+
+#about .right p{
+    font-size: 1.2 rem;
+    font-weight: 600;
+    padding: 1.5rem 0;
+    border-bottom: 1px solid #e2e0e0;
+}
+
+#about .right p span{
+    font-weight: 100;
+}
+
+#about .btn{
+    padding: .8rem 2rem;
+    color: var(--main-color) ;
+    border-radius: 25px;
+    border: 2px solid var(--main-color);
+    font-size: 1.2rem;
+    display: inline-block;
+    margin-top: 2rem;
+    transition: all .5s;
+}
+#about .btn:hover{
+    background-color:var(--main-color);
+    color: white;
+   
+
+}
+
+/* _____________________________________________________________________ */
+
+
+
+.counter .card{
+    text-align: center;
+    width: 25%;
+    border-right:1px solid #e2e0e0 ;
+}
+
+.counter .card:nth-child(4){
+    border-right: none;
+}
+
+.counter .card p.value{
+    font-size: 2.5rem;
+    font-weight: 800;
+    color: var(--second-color);
+    margin-bottom: 1rem;
+
+}
+
+/* -------------------services------------------------ */
+
+#services .tittle::after{
+    content: "services";
+}
+#services{
+    background-color: rgb(248, 249, 250); 
+}
+#services .card{
+    width: 50%;
+    padding: 1rem;
+}
+
+#services .inner{
+    display: flex;
+    align-items: center;
+}
+
+#services .left{
+   background-color:white;
+   padding: 1.25rem;
+   margin-right:1rem ;
+   border-radius: 5px;
+   box-shadow: 0px 2px 8px  hsla(0, 0%, 0%, 0.2);
+}
+
+
+#services .left .icon{
+    font-size: 2rem;
+    color: #20c997;
+
+}
+
+
+#services .card h4{
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+
+
+}
+
+#services .card p{
+    font-size: 1.2rem;
+    font-weight: 100;
+    line-height: 2rem;
+    color: #555
+}
+
+/* ------------Resume---------------------------- */
+#resume .tittle::after{
+content: "summury";
+}
+
+#resume .colum{
+    width: 50%;
+    padding: 1rem;
+}
+#resume .colum h4{
+    font-size: 1.5rem;
+}
+
+#resume .colum .inner{
+    padding: 1rem;
+    border: 1px solid #dee2e6;
+    margin: 1rem 0;
+    box-shadow: 0px 2px 8px  hsla(0, 0%, 0%, 0.2); 
+    border-radius: 10px;
+
+}
+#resume .colum .inner p:nth-child(1){
+
+    background-color: #20c997;
+    padding: 0.35em 0.65em;
+    width: fit-content;
+    border-radius: 5px;
+    font-weight: 400;
+    font-size: .85rem;
+    color: #fff;
+}
+
+#resume .colum .inner p:nth-child(4){
+    line-height: 2rem;
+}
+
+#resume .colum .inner h5{
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin: 0.9rem 0;
+
+}
+
+#resume .colum .inner h6{
+    color: red;
+    margin-bottom: 1rem;
+    font-size: 1rem;
+    font-weight: 100;
+}
+
+/* ----------------------------------------------- */
+
+.skills{
+    margin-top: 2rem;
+}
+.skills .skill{
+    width: 50%;
+    padding: 1rem;
+}
+
+.skills h4{
+    margin: 1rem;
+    font-size: 1.4rem;
+}
+
+.skills .skill .full{
+    width: 100%;
+    background-color: #dee3e4;
+    height: 9px;
+    border-radius: 10px;
+    margin: 1rem 0;
+}
+
+.skills .skill .range{
+    height: 100%;
+    background-color: var(--main-color);
+}
+
+.skills .skill .react-range{
+    width: 70%;
+}
+
+.skills .skill .Design-range{
+    width: 65%;
+}
+
+.skills .skill .css-range{
+    width: 95%;
+}
+
+.skills .skill .angular-range{
+    width: 60%;
+}
+
+.skills .skill .js-range{
+    width: 80%;
+}
+
+.skills .skill .b-strap-range{
+    width: 99%;
+}
+
+.skills .skill h5{
+    font-size: 1.1rem;
+    font-weight: 100;
+}
+
+#resume .btn{
+   
+    text-align: center;
+    margin-top: 2rem;
+    
+}
+
+
+
+#resume .btn a{
+    padding: .8rem 2rem;
+    color: var(--second-color) ;
+    border-radius: 25px;
+    border: 2px solid var(--second-color);
+    font-size: 1.2rem;
+    transition: all .5s;
+}
+
+#resume .btn a:hover{
+    background-color:var(--main-color);
+    color: white;
+}
+
+
+/* ------------portfolio---------------------- */
+
+#porfolio .tittle::after{
+    content: 'Portfolio';
+}
+
+
+
+/* ------------------------------------------------------- */
+
+.porfolio-links ul{
+    display: flex;
+    justify-content: center;
+    margin:3rem 0 2rem;
+    padding-top: 2rem ;
+    gap: 1.5rem;
+}
+
+.porfolio-links ul li a{
+    color: var(--second-color);
+    font-weight: 600;
+    transition: all .5s;
+    cursor: pointer;
+}
+
+.porfolio-links ul li a:hover ,.porfolio-links ul li a.active{
+    color: var(--main-color);
+}
+
+
+.photo-grid{
+column-count: 3;
+}
+
+.photo-grid .card{
+    padding: .5rem 0;
+    display: none;
+   
+}
+.photo-grid .card.active-card{
+   display: block;
+   
+}
+
+.photo-grid .card .inner{
+    
+    position: relative;
+}
+
+.photo-grid .card .layer{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.60);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: all .5s;
+    flex-direction: column;
+    color: white;
+    gap: 1rem;
+}
+
+.photo-grid .card .inner:hover .layer{
+    opacity: 1;
+}
+
+
+.photo-grid img{
+    width: 100%;
+
+} 
+/* ----------------------testimonial--------------------------- */
+
+#testimonial .tittle::after{
+    content: "testimonial";
+}
+#testimonial .container{
+    overflow: hidden;
+    box-shadow: 0px 2px 8px  hsla(0, 0%, 0%, 0.2);
+    position: relative;
+}
+
+.carousal{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 2rem;
+    height: 2rem;
+    background-color: #f3f1f1;
+    box-shadow: 0px 2px 8px  hsla(0, 0%, 0%, 0.2);
+    border-radius: 50%;
+    cursor: pointer;
+    transition: .5s;
+    color: var(--second-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2rem;
+    z-index: 2;
+    
+}
+
+.carousal:hover{
+    box-shadow: 2px 10px 16px  hsla(0, 0%, 0%, 0.5);
+    background-color: #c0bdbd;
+    color: white; 
+    transform: translateY(-60%);
+    
+    
+}
+
+
+
+.carousal-right{
+    right: 0px;
+}
+
+.carousal-left{ 
+    left: 0px;
+}
+
+.disable{
+    background-color:  #f3f1f1c5;
+    color:  #f3f1f1c5;
+    box-shadow: none;
+}
+.disable:hover{
+    box-shadow: none;
+    background-color:  #f3f1f1c5;
+
+}
+
+#testimonial .row{
+    width: 200%;
+    transition: all .5s;
+} 
+
+#testimonial .card{
+    width: 25%;
+    padding: 2rem 1rem;
+
+    
+}
+
+#testimonial .card .inner{
+    background-color: #f3f1f1;
+    border-radius: 10px;
+    box-shadow: 0px 2px 8px  hsla(0, 0%, 0%, 0.2);
+    padding: 2rem;
+}
+#testimonial .card .inner img{
+    border-radius: 50%;
+    box-shadow: 2px 2px 5px  hsla(0, 0%, 0%);
+}
+
+#testimonial .card .inner .info{
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    margin-bottom: 2rem;
+
+}
+
+#testimonial .card .inner .info h4 {
+    line-height: 2rem;
+    font-size: 1.1rem;
+}
+
+#testimonial .card .inner .info h4 span{
+    color: var(--second-color);
+}
+
+#testimonial .card .inner p{
+    font-size: 1.1rem;
+    line-height: 2rem;
+}
+
+#testimonial .card .inner ul.row{
+    justify-content: left;
+    margin-top: 1rem;
+    color: gold;
+
+
+
+}
+
+
+
+
+
+/* -----------------contact------------------- */
+
+#contact{
+    background-color: #f3f1f1;
+}
+#contact .tittle::after{
+    content: "contact";
+
+}
+#contact .row{
+    
+    
+    align-items: start;
+}
+#contact h4{
+    font-size: 1.3rem;
+    margin: 1.5rem 0;
+}
+#contact p{
+    
+    line-height: 1.7rem;
+    margin: 1rem 0;
+    font-size: 1.1rem;
+
+
+}
+
+#contact li{
+    font-size: 1.1rem;
+    margin:1rem 0 ;
+}
+
+.icon{
+    color: var(--main-color);
+    margin-right: 1rem;
+}
+#contact .right{
+    width: 75%;
+}
+
+#contact .left{
+    width: 20%;
+}
+
+#contact input {
+    width: 49%;
+    border-radius: 5px;
+    padding: 1rem ;
+    margin-bottom: 2rem;
+    border: solid #e2e0e0 1px;
+    font-size: 1rem;
+
+}
+
+
+#contact textarea{
+    border-radius: 5px;
+    width: 100%;
+    height: 7rem;
+    padding: 1rem;
+    border: solid #e2e0e0 1px;
+    font-size: 1rem;
+    
+
+}
+
+/* ----------------------------------- */
+
+
+@media screen and (max-width: 1100px){
+:root{
+    font-size: 15px;
+}
+
+   
+
+    #about .left{
+        width: 100%;
+        padding: 1rem;
+    }
+    
+    
+    
+    #about .right{
+        width: 100%;
+        padding: 1.5rem;
+        
+    }
+    #about .right .inner{
+        display: flex;
+        flex-wrap: wrap;
+        text-align: center;
+        
+    }
+    #about .right .inner p {
+        width: 50%;
+    }
+    #about .right .inner a{
+        margin: auto;
+    }
+
+    .photo-grid{
+        column-count: 2;
+        }
+
+
+    
+
+    #contact .right{
+        width: 100%;
+    }
+
+   
+    #contact .left{
+        width: 100%;
+        order: 1;
+    }
+    #contact .left .inner{
+        width: 80%;
+        margin: auto;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+         
+    }
+    #contact .left .inner ul{
+margin-left:auto ;       
+    }
+   
+   
+   
+}
+
+@media screen and (max-width: 850px){
+    .container{
+        width: 90%;
+    }
+    :root{
+        font-size: 14px;
+    }
+    #services .card{
+        width: 100%;
+}
+
+#navToggle{
+   font-size: 1.5rem;
+    color: white;
+    display: block;
+}
+
+
+.links .row{
+   flex-direction: column;
+   justify-content: space-evenly;
+   position: fixed;
+   width: 25%;
+   background-color:black;
+   border-left:5px solid var(--main-color);
+   border-top:5px solid var(--main-color);
+   bottom: 100%;
+   transition: all .5s;
+   
+
+}
+}
+
+@media screen and (max-width: 600px){
+
+    .container{
+        width: 95%;
+    }
+
+ 
+    
+    .counter .card{
+       
+        width: 50%;
+        padding: 2rem ;
+        border-bottom: 2px solid #c0bdbd;
+       
+    }
+    /* ----------- */
+    #services .inner{
+        flex-direction: column;
+    }
+    #services .card h4{
+        text-align: center;
+        margin-top: 1rem;
+    }
+
+    #resume .colum{
+        width: 100%;
+    }
+    .skills .skill{
+        width: 100%;
+    }
+    /* ------------- */
+    .photo-grid{
+        column-count: 1;
+        }
+
+        #testimonial .row{
+            width: 400%;
+        }
+        #contact input{
+            width: 100%;
+           
+         }
+         #contact .left .inner{
+            width: 100%;
+           
+        }
+
+
+    
+        .tittle::after{
+           display: none;
+         }
+}
+
+
+@media screen and (max-width: 450px){
+    .container{
+        width: 97%;
+    }
+   
+
+    #home h1{
+        font-size: 1.8rem;
+    }
+
+    #about .right .inner p {
+        width: 100%;
+        text-align: center;
+    }
+
+    #contact .left .inner ul{
+        width: 100%;
+        
+     }
+
+    
+     
+     
+   
+}
